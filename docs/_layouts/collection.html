@@ -1,0 +1,53 @@
+---
+layout: collection
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+{% include scripts.html %}
+</head>
+<body class="collection {{ page.title | downcase }}">
+
+{% include header.html %}
+
+<div class="row">
+
+	<div class="column medium-9 large-10 medium-push-3 large-push-2">
+		<h1 class="page-heading">{{ page.title }}</h1>
+		{{ content }}
+	</div>
+	
+	<div class="column medium-3 large-2 medium-pull-9 large-pull-10">
+
+		<ul class="menu vertical">
+			<li>
+				<a href="/tags">Tags</a>
+				<ul class="nested menu vertical">
+				{% for tag in site.tags %}
+					<li><a href="{{ tag.url }}">{{ filter.title }}</a></li>
+				{% endfor %}
+				</ul>
+			</li>
+			<li>
+				<a href="/models">Models</a>
+				<ul class="nested menu vertical">
+				{% for model in site.models %}
+					<li><a href="{{ model.url }}">{{ filter.title }}</a></li>
+				{% endfor %}
+				</ul>
+			</li>
+			<li>
+				<a href="/filters">Filters</a>
+				<ul class="nested menu vertical">
+				{% for filter in site.filters %}
+					<li><a href="{{ filter.url }}">{{ filter.title }}</a></li>
+				{% endfor %}
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</body>
+</html>
