@@ -21,26 +21,26 @@ layout: collection
 
 		<ul class="menu vertical">
 			<li>
-				<a href="/tags">Tags</a>
+				<a href="{{ site.baseurl }}/tags">Tags</a>
 				<ul class="nested menu vertical">
 				{% for tag in site.tags %}
-					<li><a href="{{ tag.url }}">{{ filter.title }}</a></li>
+					<li><a href="{{ site.baseurl }}{{ tag.url }}">{{ filter.title }}</a></li>
 				{% endfor %}
 				</ul>
 			</li>
 			<li>
-				<a href="/models">Models</a>
+				<a href="{{ site.baseurl }}/models">Models</a>
 				<ul class="nested menu vertical">
 				{% for model in site.models %}
-					<li><a href="{{ model.url }}">{{ filter.title }}</a></li>
+					<li><a href="{{ site.baseurl }}{{ model.url }}">{{ filter.title }}</a></li>
 				{% endfor %}
 				</ul>
 			</li>
 			<li>
-				<a href="/filters">Filters</a>
+				<a href="{{ site.baseurl }}/filters">Filters</a>
 				<ul class="nested menu vertical">
 				{% for filter in site.filters %}
-					<li><a href="{{ filter.url }}">{{ filter.title }}</a></li>
+					<li><a href="{{ site.baseurl }}{{ filter.url }}">{{ filter.title }}</a></li>
 				{% endfor %}
 				</ul>
 			</li>
