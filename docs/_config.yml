@@ -25,10 +25,10 @@ github_username:  jekyll
 collections:
   tags:
     output: true
-    permalink: /:collection:title/
+    permalink: /:collection/:title
   models:
     output: true
-    permalink: /:collection/:title/
+    permalink: /:collection/:title
   filters:
     output: true
     permalink: /:collection/:title
