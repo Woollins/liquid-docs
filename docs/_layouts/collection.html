@@ -24,7 +24,7 @@ layout: collection
 				<a href="{{ site.baseurl }}/tags">Tags</a>
 				<ul class="nested menu vertical">
 				{% for tag in site.tags %}
-					<li><a href="{{ site.baseurl }}{{ tag.url }}">{{ filter.title }}</a></li>
+					<li><a href="{{ site.baseurl }}{{ tag.url }}">{{ tag.title }}</a></li>
 				{% endfor %}
 				</ul>
 			</li>
@@ -32,7 +32,7 @@ layout: collection
 				<a href="{{ site.baseurl }}/models">Models</a>
 				<ul class="nested menu vertical">
 				{% for model in site.models %}
-					<li><a href="{{ site.baseurl }}{{ model.url }}">{{ filter.title }}</a></li>
+					<li><a href="{{ site.baseurl }}{{ model.url }}">{{ model.title }}</a></li>
 				{% endfor %}
 				</ul>
 			</li>
