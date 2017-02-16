@@ -6,21 +6,18 @@ permalink: /getting-started/
 
 Now that you have a know what Liquid is let's have a look at four key features and how they work in relation to theme development.
 
-## Objects
+## Models
 
-Objects are used to tell Liquid where to show content on a page. Objects are identified by using curly brackets {% raw %}`{{`{% endraw %} and {% raw %}`}}`{% endraw %}.
-
+Models (also known as Objects) are used to tell Liquid where to show content on a page. Models are identified by using curly brackets {% raw %}`{{`{% endraw %} and {% raw %}`}}`{% endraw %}.
 {% raw %}
 ``` 
 {{ Product.Title }}
 {{ Product.Description }} 
 ```
 {% endraw %}
-
-
 The above examples will pull the relevant data from our shop and output it in place of the Liquid placeholder. 
 
-{% raw %}```{{ Product.Title }}```{% endraw %} would display the title of the product, for example 'Nikon Camera' and  {% raw %}```{{ Product.Description }}```{% endraw %} will display the description of that product 'One of the best camera's around!'.
+**{% raw %}```{{ Product.Title }}```{% endraw %}** would display the title of the product, for example 'Nikon Camera' and  **{% raw %}```{{ Product.Description }}```{% endraw %}** will display the description of that product 'One of the best camera's around!'.
 
 To summarise, Liquid output is very much like 'find and replace'. When rendering the template 3ex.net will go and find all instances of Liquid output tags and replace them with the relevant data from your store.
 
@@ -29,7 +26,7 @@ You'll also notice from these examples that Liquid uses the dot syntax for acces
 
 ## Tags
 
-Tags make up the programming logic that tells templates what to do. Tags are identified by curly braces and percent signs: {% raw %}`{%`{% endraw %} and {% raw %}`%}`{% endraw %}.
+Tags make up the programming logic that tells templates what to do. Tags are identified by curly braces and percent signs: **{% raw %}`{%`{% endraw %}** and **{% raw %}`%}`{% endraw %}**.
 
 The markup used in tags does not produce any visible text. This means that you can assign variables and create conditions and loops without showing any of the Liquid logic on the page.
 
@@ -58,7 +55,7 @@ Liquid tags allow us to control the flow of a template. For example we can highl
 
 In the above example we are controlling what the output to our template is using a simple if, else, endif statement. In many ways if statements are like questions.
 
-In the above example if the answer to our if statement question is true we render the words 'Customer is signed in', if it's false our template carries on and outputs the text following our {% raw %}```{% else %}```{% endraw %} clause - in this case 'Customer is not signed in'.
+In the above example if the answer to our if statement question is true we render the words 'Customer is signed in', if it's false our template carries on and outputs the text following our **{% raw %}```{% else %}```{% endraw %}** clause - in this case 'Customer is not signed in'.
 
 *__You can view a full list of tags [here](Tags)__*
 
