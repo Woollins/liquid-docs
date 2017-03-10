@@ -44,7 +44,7 @@ p .highlighter-rouge{
 
 .top-bar{
 	background:#00bbe4;
-	margin-bottom:1rem;
+	margin-bottom:1px;
 }
 
 .top-bar ul{
@@ -58,6 +58,7 @@ p .highlighter-rouge{
 
 .top-bar .top-bar-title{
 	font-weight:bold;
+	padding-top:1rem;
 }
 
 .menu{
@@ -84,4 +85,29 @@ p .highlighter-rouge{
 
 .large-10 ul li a:hover{
 	text-decoration:underline;
+}
+
+.lightbg{
+	background:#f3f8f9;
+	min-height:400px;
+}
+
+.lightbg h1{
+	margin-top:8rem;
+	font-size:3rem;
+}
+
+.lightbg h1 span{
+	font-weight:bold;
+	color:#00bbe4;
+}
+
+.lightbg h1 strong{
+	font-weight:normal;
+	color:#fff;
+	background:#00bbe4;
+}
+
+.lightbg p{
+	font-size:1.5rem;
 }
