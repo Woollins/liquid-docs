@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: normal
 title: Getting Started
 permalink: /getting-started/
 ---
