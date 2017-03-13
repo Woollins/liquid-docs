@@ -20,7 +20,7 @@ Control flow tags create conditions that decide whether blocks of Liquid code ge
 ### if 
 Executes a block of code if the result is true.
 {% raw %}
-```
+```liquid
 {% if product.Title == 'Nikon Camera' %}
   This Nikon Camera is great!
 {% endif %}
@@ -34,7 +34,7 @@ Output: This Nikon Camera is great!
 ### unless 
 Like if, but only executes a block of code if the result is false.
 {% raw %}
-```
+```liquid
 {% unless product.Title == 'Nikon Camera' %}
   You are not buying a Nikon Camera
 {% endunless %}
@@ -44,7 +44,7 @@ Output: You are not buying awesome shoes.
 
 This is the same as using the following if statement,
 {% raw %}
-```
+```liquid
 {% if product.Title != 'Nikon Camera' %}
   You are not buying a Nikon Camera.
 {% endif %}
@@ -57,7 +57,7 @@ This is the same as using the following if statement,
 ### else/else if 
 Executes a block of code if the result is true and another block of code if false.
 {% raw %}
-```
+```liquid
 {% if product.Title == 'Nikon Camera' %}
   You're shipping internationally. Your order should arrive in 2–3 weeks.
 {% elsif product.Title == 'Canon Camera' %}
@@ -76,7 +76,7 @@ Creates a switch statement to execute a particular block of code when a variable
 
 You can optionally add an else statement at the end of the case to provide code to execute if none of the conditions are met.
 {% raw %}
-```
+```liquid
 {% case shipping_method.title %}
   {% when 'International Shipping' %}
      You're shipping internationally. Your order should arrive in 2–3 weeks.
@@ -99,7 +99,7 @@ You can use 'and/or' to include one or more conditions within your tags.  If you
 #### and
 A condition with an 'and' will only be true if both the left and the right side of the condition are true.
 {% raw %}
-``` 
+```liquid 
 {% if product.Title == 'Nikon Camera' and product.Description == 'This camera is great!' %}
   You are buying a great Nikon Camera!
 {% endif %}
@@ -110,7 +110,7 @@ If both conditions are true you will get the following message, 'You are buying 
 #### or
 A condition with an 'or' will be true if either the left or the right side of the condition is true.
 {% raw %}
-``` 
+```liquid 
 {% if product.Title contains 'SALE' or product.Description contains 'mycompany.com' %}
   Welcome! We're pleased to offer you a special discount of 15% on all products.
 {% else %}

@@ -104,19 +104,23 @@ p .highlighter-rouge{
 	font-size:1.5rem;
 }
 
+
+// EXAMPLE CONTENT
+
 .example-title{
 	padding: 9px 14px;
-    background-color: #e5e5e5;
-    border: 1px solid #dddddd;
+    background-color: #e1e1e8;
+    border: 1px solid #e1e1e8;
     border-bottom:none;
     border-radius: 4px 4px 0 0;
 }
 
 .highlight{
+	position: relative;
 	padding: 9px 14px;
     margin-bottom: 14px;
-    background-color: #f5f5f5;
-    border: 1px solid #dddddd;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
     border-radius: 0 0 4px 4px;
     overflow: auto;
 
@@ -187,3 +191,40 @@ code{padding:0!important;}
 pre {-moz-tab-size: 4;} /* Code for Firefox */
 pre {-o-tab-size: 4;} /* Code for Opera 10.6-12.1 */
 pre {tab-size: 4;}
+
+.copy-button{
+	position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #e1e1e8;
+    border-top:none;
+    border-right:none;
+    border-radius: 0 0 0 4px;
+    cursor: pointer;
+    outline: none;
+    font-size: 0.75rem;
+
+    &:hover{
+    	background: #00bbe4;
+    	color: #ffffff;
+    	border-color: #00bbe4;
+    }
+}
+
+.blueprints{
+	.blueprint{
+		.card{
+			position: relative;
+
+			.blueprint-link{
+				position: absolute;
+				top:0;
+				right:0;
+				bottom:0;
+				left:0;
+			}
+		}
+	}
+}

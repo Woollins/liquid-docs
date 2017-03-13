@@ -10,7 +10,7 @@ Now that you have a know what Liquid is let's have a look at four key features a
 
 Models (also known as Objects) are used to tell Liquid where to show content on a page. Models are identified by using curly brackets {% raw %}`{{`{% endraw %} and {% raw %}`}}`{% endraw %}.
 {% raw %}
-``` 
+```liquid
 {{ Product.Title }}
 {{ Product.Description }} 
 ```
@@ -31,7 +31,7 @@ Tags make up the programming logic that tells templates what to do. Tags are ide
 The markup used in tags does not produce any visible text. This means that you can assign variables and create conditions and loops without showing any of the Liquid logic on the page.
 
 {% raw %}
-``` 
+```liquid
 {% if user %}
   Hello
 {% endif %} 
@@ -44,7 +44,7 @@ In the above example we are controlling the output by using a simple if statemen
 Liquid tags allow us to control the flow of a template. For example we can highlight when a user is logged in. 
 
 {% raw %}
-```
+```liquid
 {% if SignInDetails.SignedIn %}
     Customer is signed in
 {% else %}
@@ -64,7 +64,7 @@ In the above example if the answer to our if statement question is true we rende
 Filters are used to modify the output of strings, numbers, variables, and objects. Their purpose is to manipulate the data in some way so that it's format changes. 
 
 {% raw %}
-``` 
+```liquid
 {{ product.Description | Append: " (SALE!)" }}
 ```
 {% endraw %}
@@ -77,7 +77,7 @@ The above would output 'Nikon Camera (SALE!)', without the filter the '(SALE!)' 
 
 Operators are used within logic tags to determine what the output will be.  For example if you want to output specific data for a shirt you could use the following,  
 {% raw %}
-```
+```liquid
 {% if product.type == "Shirt" %}
   This is a shirt.
 {% endif %}
@@ -89,7 +89,7 @@ In the above example we are saying if the product type is a shirt then output 'T
 Multiple operators can also be used,
 
 {% raw %}
-```
+```liquid
 {% if product.type == "Shirt" or product.type == "Shoes" %}
   This is a shirt or a shoe.
 {% endif %}
@@ -115,7 +115,7 @@ You have access to a wide range of operators in Liquid, many of which you will f
 Loops allow us to output the same piece of code a set number of times.
 
 {% raw %}
-```
+```liquid
 {% for Product in HierarchyNode.Products %}
     <h2>{{Product.Description}}</h2>
     <p>{{ Product.StandardOurPrice_VatInclusivePrice | Round:2  }}</p>
@@ -132,7 +132,7 @@ The hierarchy level or category the product is in is defined by using the term '
 It doesn't matter that we don't know how many shoes are listed in the category, when we reach the end of the loop the next part of the template will be rendered.
 
 {% raw %}
-```
+```liquid
 <h2>{{Product.Description}}</h2>
 <p>{{ Product.StandardOurPrice_VatInclusivePrice  }}</p>
 ```

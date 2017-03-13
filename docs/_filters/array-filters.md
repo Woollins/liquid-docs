@@ -20,7 +20,7 @@ Change the output of the arrays.
 ### Join 
 Combines the items in an array into a single string.
 {% raw %}
-```
+```liquid
 {{ product.Tags | Join: ", " }}
 ```
 {% endraw %}
@@ -31,7 +31,7 @@ Output: 'Tag1, Tag2, Tag3'
 ### First 
 Returns the first item of an array.
 {% raw %}
-```
+```liquid
 <!-- product.tags = "sale", "mens", "womens", "awesome" -->
 {{ product.tags | First }}
 ```
@@ -42,7 +42,7 @@ Output: 'sale'
 ### Last 
 Returns the last item of an array.
 {% raw %}
-```
+```liquid
 <!-- product.tags = "sale", "mens", "womens", "awesome" -->
 {{ product.tags | Last }}
 ```
@@ -53,7 +53,7 @@ Output: 'awesome'
 ### Size 
 Returns the number of characters in a string or the number of items in an array. 
 {% raw %}
-```
+```liquid
 {{ "This sale is great." | Size }}
 ```
 {% endraw %}
@@ -63,7 +63,7 @@ Output: '19'
 ### Sort 
 Sort elements of the array.
 {% raw %}
-```
+```liquid
 {% assign my_array = "zebra, octopus, giraffe, Sally Snake" %}
 {{ my_array | Sort  }}
 ```
@@ -74,7 +74,7 @@ Output: 'Sally Snake, giraffe, octopus, zebra'
 ### StripHtml 
 Remove all HTML tags from a string
 {% raw %}
-```
+```liquid
 {{ "Have <em>you</em> seen my <strong>shoes</strong>?" | StripHtml }}
 ```
 {% endraw %}
@@ -88,7 +88,7 @@ Product Sepecification: 2005, Hatchback,
 59.000 miles, Manual,
 1.6L, Diesel
 {% raw %}
-```
+```liquid
 {{ Product["Answer_SPECIFICATION"] | StripNewlines }}
 ```
 {% endraw %}

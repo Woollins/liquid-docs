@@ -15,7 +15,7 @@ description: repeatedly run blocks of code
 ### for 
 'for' or 'for loops' repeatedly execute a block of code.
 {% raw %}
-```
+```liquid
 {% for product in HierarchyNode.Products %}
   {{ product.Title }}
 {% endfor %}
@@ -26,7 +26,7 @@ The above will output all the product titles for every product within the hierar
 #### else
 You can use 'else' within a 'for loop' to output data if the loop doesn't contain anything.  For example if a hierarchy/category doesn't have any products.
 {% raw %}
-```
+```liquid
 {% for product in HierarchyNode.Products %}
   {{ product.Title }}
 {% else %}
@@ -38,7 +38,7 @@ You can use 'else' within a 'for loop' to output data if the loop doesn't contai
 #### break
 You can use 'break' to stop the loop.
 {% raw %}
-```
+```liquid
 {% for i in (1..5) %}
   {% if i == 4 %}
     {% break %}
@@ -53,7 +53,7 @@ Output: 1 2 3
 #### continue
 You can skip the current iteration by using the 'continue' tag.
 {% raw %}
-```
+```liquid
 {% for i in (1..5) %}
   {% if i == 4 %}
     {% continue %}
@@ -70,7 +70,7 @@ Output: 1 2 3  5
 #### limit
 Exits the for loop at a specific index.
 {% raw %}
-```
+```liquid
 <!-- numbers = [1,2,3,4,5] -->
 {% for item in numbers limit:2 %}
     {{ item }}
@@ -82,7 +82,7 @@ Output: 1 2
 #### offset
 Starts the for loop at a specific index.
 {% raw %}
-```
+```liquid
 <!-- numbers = [1,2,3,4,5] -->
 {% for item in numbers offset:2 %}
     {{ item }}
@@ -94,7 +94,7 @@ Output: 3 4 5 6
 #### range
 Defines a range of numbers to loop through. You can define the range using both literal and variable values.
 {% raw %}
-```
+```liquid
 {% for i in (3..5) %}
   {{ i }}
 {% endfor %}
@@ -102,7 +102,7 @@ Defines a range of numbers to loop through. You can define the range using both 
 {% endraw %}
 Output: 3 4 5
 {% raw %}
-```
+```liquid
 {% assign my_limit = 4 %}
 {% for i in (1..my_limit) %}
     {{ i }}
@@ -114,7 +114,7 @@ Output: 1 2 3 4
 #### reversed
 Reverses the order of the loop.
 {% raw %}
-```
+```liquid
 <!-- if array = [1,2,3,4,5,6] -->
 {% for item in array reversed %}
   {{ item }}
@@ -308,7 +308,7 @@ Output:
 #### limit
 Exits the tablerow loop after a specific index.
 {% raw %}
-```
+```liquid
 {% tablerow product in collection.products cols:2 limit:3 %}
   {{ product.title }}
 {% endtablerow %}
@@ -318,7 +318,7 @@ Exits the tablerow loop after a specific index.
 #### offset
 Starts the tablerow loop at a specific index.
 {% raw %}
-```
+```liquid
 {% tablerow product in collection.products cols:2 offset:3 %}
   {{ product.title }}
 {% endtablerow %}
