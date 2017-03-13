@@ -38,6 +38,11 @@ collections:
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+
+sass:
+  style: compressed
+
 # theme: minima
 gems:
   - jekyll-feed
