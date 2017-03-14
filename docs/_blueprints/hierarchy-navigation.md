@@ -86,5 +86,3 @@ Nested menu.
 </ul>
 ```
 {% endraw %}
-
----
