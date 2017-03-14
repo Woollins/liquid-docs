@@ -124,10 +124,11 @@ a, input{
 }
 
 .highlight{
-	padding: 9px 14px;
+    position: relative;
+    padding: 9px 14px;
     margin-bottom: 14px;
-    background-color: #f5f5f5;
-    border: 1px solid #dddddd;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
     border-radius: 0 0 4px 4px;
     overflow: auto;
 	/** Syntax highlighting styles */
@@ -202,7 +203,7 @@ pre {
 	-moz-tab-size: 4; /* Code for Firefox */
 }
 .copy-button{
-	osition:absolute;
+	position:absolute;
 	top:0;
 	right:0;
 	padding:10px;
@@ -214,12 +215,13 @@ pre {
 	cursor:pointer;
 	outline:none;
 	font-size:0.75rem;
+	&:hover{
+		background:#00bbe4;
+		color:#ffffff;
+		border-color:#00bbe4;
+	}
 }
-.copy-button:hover{
-	background:#00bbe4;
-	color:#ffffff;
-	border-color:#00bbe4;
-}
+
 .blueprints .blueprint .card{
 	position:relative;
 }

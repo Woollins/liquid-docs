@@ -5,7 +5,7 @@ name: iteration
 description: Repeatedly run blocks of code
 ---
 
-**Iteration tags** repeatedly run blocks of code.
+## Iteration tags
 * [for](#for)
 * [cycle](#cycle)
 * [tablerow](#tablerow)
@@ -14,6 +14,7 @@ description: Repeatedly run blocks of code
 <a name="for"></a>
 ### for 
 'for' or 'for loops' repeatedly execute a block of code.
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 {% for product in HierarchyNode.Products %}
@@ -25,6 +26,7 @@ The above will output all the product titles for every product within the hierar
 
 #### else
 You can use 'else' within a 'for loop' to output data if the loop doesn't contain anything.  For example if a hierarchy/category doesn't have any products.
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 {% for product in HierarchyNode.Products %}
@@ -37,6 +39,7 @@ You can use 'else' within a 'for loop' to output data if the loop doesn't contai
 
 #### break
 You can use 'break' to stop the loop.
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 {% for i in (1..5) %}
@@ -48,10 +51,14 @@ You can use 'break' to stop the loop.
 {% endfor %}
 ```
 {% endraw %}
-Output: 1 2 3
+<div class="example-title">Output</div>
+```html
+1 2 3
+```
 
 #### continue
 You can skip the current iteration by using the 'continue' tag.
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 {% for i in (1..5) %}
@@ -63,12 +70,16 @@ You can skip the current iteration by using the 'continue' tag.
 {% endfor %}
 ```
 {% endraw %}
-Output: 1 2 3  5
+<div class="example-title">Output</div>
+```html
+1 2 3  5
+```
 
 ### for tag parameters
 
 #### limit
 Exits the for loop at a specific index.
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 <!-- numbers = [1,2,3,4,5] -->
@@ -77,10 +88,14 @@ Exits the for loop at a specific index.
 {% endfor %}
 ```
 {% endraw %}
-Output: 1 2
+<div class="example-title">Output</div>
+```html
+1 2
+```
 
 #### offset
 Starts the for loop at a specific index.
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 <!-- numbers = [1,2,3,4,5] -->
@@ -89,10 +104,14 @@ Starts the for loop at a specific index.
 {% endfor %}
 ```
 {% endraw %}
-Output: 3 4 5 6
+<div class="example-title">Output</div>
+```html
+3 4 5 6
+```
 
 #### range
 Defines a range of numbers to loop through. You can define the range using both literal and variable values.
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 {% for i in (3..5) %}
@@ -100,7 +119,11 @@ Defines a range of numbers to loop through. You can define the range using both 
 {% endfor %}
 ```
 {% endraw %}
-Output: 3 4 5
+<div class="example-title">Output</div>
+```html
+3 4 5
+```
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 {% assign my_limit = 4 %}
@@ -109,10 +132,14 @@ Output: 3 4 5
 {% endfor %}
 ```
 {% endraw %}
-Output: 1 2 3 4
+<div class="example-title">Output</div>
+```html
+1 2 3 4
+```
 
 #### reversed
 Reverses the order of the loop.
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 <!-- if array = [1,2,3,4,5,6] -->
@@ -121,7 +148,10 @@ Reverses the order of the loop.
 {% endfor %}
 ```
 {% endraw %}
-Output: 6 5 4 3 2 1
+<div class="example-title">Output</div>
+```html
+6 5 4 3 2 1
+```
 
 ---
 
@@ -138,8 +168,9 @@ Loops through a group of strings and outputs them in the order that they were pa
 cycle accepts a parameter called cycle group in cases where you need multiple cycle blocks in one template. If no name is supplied for the cycle group, then it is assumed that multiple calls with the same parameters are one group.
 
 The example below shows why cycle groups are necessary when there are multiple instances of the cycle block.
+<div class="example-title">Input</div>
 {% raw %}
-``` html
+```liquid
 <ul>
   {% for product in collections.collection-1.products %}
     <li{% cycle ' style="clear:both;"', '', '', ' class="last"' %}>
@@ -163,8 +194,9 @@ The example below shows why cycle groups are necessary when there are multiple i
 {% endraw %}
 
 In the example above, if the first collection only has two products, the second collection loop will continue the cycle where the first one left off. This will result in this undesired output:
+<div class="example-title">Output</div>
 {% raw %}
-``` html
+```html
 <ul>
   <li style="clear:both"></li>
 </ul>
@@ -178,8 +210,9 @@ In the example above, if the first collection only has two products, the second 
 ```
 {% endraw %}
 To avoid this, you can use a cycle group for each cycle block, as shown below:
+<div class="example-title">Input</div>
 {% raw %}
-``` html
+```liquid
 <ul>
 {% for product in collections.collection-1.products %}
   <li{% cycle 'group1': ' style="clear:both;"', '', '', ' class="last"' %}>
@@ -202,8 +235,9 @@ To avoid this, you can use a cycle group for each cycle block, as shown below:
 ```
 {% endraw %}
 With the code above, the two cycle blocks are independent of each other. The result is shown below:
+<div class="example-title">Output</div>
 {% raw %}
-``` html
+```html
 <ul>
   <li style="clear:both"></li>
   <li></li>
@@ -223,8 +257,9 @@ With the code above, the two cycle blocks are independent of each other. The res
 <a name="tablerow"></a>
 ### tablerow 
 Generates rows for an HTML table. Must be wrapped in an opening {% raw %}<table>{% raw %} and closing {% raw %}</table>{% raw %} HTML tags. For a full list of attributes available within a tablerow loop, see tablerow (object).
+<div class="example-title">Input</div>
 {% raw %}
-``` html
+```liquid
 <table>
   {% tablerow product in collection.products %}
     {{ product.title }}
@@ -232,9 +267,9 @@ Generates rows for an HTML table. Must be wrapped in an opening {% raw %}<table>
 </table>
 ```
 {% endraw %}
-Output:
+<div class="example-title">Output</div>
 {% raw %}
-``` html
+```html
 <table>
   <tr class="row1">
     <td class="col1">
@@ -264,8 +299,9 @@ Output:
 
 #### cols
 Defines how many columns the tables should have.
+<div class="example-title">Input</div>
 {% raw %}
-``` html
+```liquid
 <table>
   {% tablerow product in collection.products cols:2 %}
     {{ product.title }}
@@ -273,9 +309,9 @@ Defines how many columns the tables should have.
 </table>
 ```
 {% endraw %}
-Output:
+<div class="example-title">Output</div>
 {% raw %}
-``` html 
+```html
 <table>
   <tr class="row1">
     <td class="col1">
@@ -307,6 +343,7 @@ Output:
 
 #### limit
 Exits the tablerow loop after a specific index.
+<div class="example-title">Output</div>
 {% raw %}
 ```liquid
 {% tablerow product in collection.products cols:2 limit:3 %}
@@ -317,6 +354,7 @@ Exits the tablerow loop after a specific index.
 
 #### offset
 Starts the tablerow loop at a specific index.
+<div class="example-title">Output</div>
 {% raw %}
 ```liquid
 {% tablerow product in collection.products cols:2 offset:3 %}
@@ -327,8 +365,9 @@ Starts the tablerow loop at a specific index.
 
 #### range
 Defines a range of numbers to loop through. The range can be defined by both literal and variable numbers.
+<div class="example-title">Output</div>
 {% raw %}
-``` html
+```liquid
 <table>
   {% tablerow i in (3..5) %}
     {{ i }}

@@ -8,22 +8,18 @@
 		// - the 'pre' element.
 		// - the 'div' with the 'paste-content' id.
 		
-		var pre = document.getElementsByTagName('pre');
-		var pasteContent = document.getElementById('paste-content');
+		// Select liquid syntax only.
+		var pre = $(".language-liquid .highlight");
 
-		// Add a copy button in the 'pre' element.
-		// which only has the className of 'language-'.
-		
+		// Add a copy button in the 'pre' element.            
 		for (var i = 0; i < pre.length; i++) {
-			var isLanguage = pre[i].children[0].className.indexOf('language-');
+			var button = document.createElement('button');
+			button.className = 'copy-button';
+			button.textContent = 'Copy';
 
-				var button           = document.createElement('button');
-						button.className = 'copy-button';
-						button.textContent = 'Copy';
+			pre[i].appendChild(button);
+		}
 
-						pre[i].appendChild(button);
-		};
-		
 		// Run Clipboard
 		
 		var copyCode = new Clipboard('.copy-button', {
@@ -57,3 +53,5 @@
 
 	})();
 </script>
+
+
