@@ -308,7 +308,7 @@ Output:
 #### limit
 Exits the tablerow loop after a specific index.
 {% raw %}
-```
+```liquid
 {% tablerow product in collection.products cols:2 limit:3 %}
   {{ product.title }}
 {% endtablerow %}
@@ -318,7 +318,7 @@ Exits the tablerow loop after a specific index.
 #### offset
 Starts the tablerow loop at a specific index.
 {% raw %}
-```
+```liquid
 {% tablerow product in collection.products cols:2 offset:3 %}
   {{ product.title }}
 {% endtablerow %}

@@ -17,7 +17,7 @@ Math filters allow you to apply mathematical tasks.
 ### DividedBy 
 Division
 {% raw %}
-```
+```liquid
 {{ "40" | DividedBy: 20 }}
 ```
 {% endraw %}
@@ -27,7 +27,7 @@ Output: '2'
 ### Minus 
 Subtraction
 {% raw %}
-```
+```liquid
 {{ "40" | Minus: 20 }}
 ```
 {% endraw %}
@@ -37,7 +37,7 @@ Output: '20'
 ### Plus 
 Addition
 {% raw %}
-```
+```liquid
 {{ "40" | Minus: 20 }}
 ```
 {% endraw %}
@@ -47,7 +47,7 @@ Output: '20'
 ### Times 
 Multiplication
 {% raw %}
-```
+```liquid
 {{ "40" | Times: 20 }}
 ```
 {% endraw %}

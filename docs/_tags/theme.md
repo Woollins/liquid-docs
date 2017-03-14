@@ -21,7 +21,7 @@ description: A wide range of functions available
 ### comment 
 Allows you to leave un-rendered code inside a Liquid template. Any text within the opening and closing 'comment' blocks will not be output, and any Liquid code within will not be executed.
 {% raw %}
-```
+```liquid
 This product is great {% comment %}, but expensive! {% endcomment %}.
 ```
 {% endraw %}
@@ -33,7 +33,7 @@ Output: This product is great
 ### include 
 Inserts a snippet from the snippets folder of a theme.
 {% raw %}
-```
+```liquid
 {% include 'my-snippet-file' %}
 ```
 {% endraw %}
@@ -42,7 +42,7 @@ You don't need to add the .liquid extension just the name of your snippet you wa
 #### Including multiple variables in a snippet
 There are two ways to include multiple variables in a snippet. You can assign and include them on different lines, which creates them in the parent template:
 {% raw %}
-```
+```liquid
 {% assign my_variable = 'apples' %}
 {% assign my_second_variable = 'oranges' %}
 {% include 'snippet' %}
@@ -50,7 +50,7 @@ There are two ways to include multiple variables in a snippet. You can assign an
 {% endraw %}
 Or you can create variables on the same line where you include the snippet:
 {% raw %}
-```
+```liquid
 {% include 'snippet', my_variable: 'apples', my_other_variable: 'oranges' %}
 ```
 {% endraw %}
@@ -70,7 +70,7 @@ shape: '{{ shape }}'
 
 Within theme.liquid, you can include the color.liquid snippet as follows:
 {% raw %}
-```
+```liquid
 {% assign shape = 'circle' %}
 {% include 'color' %}
 {% include 'color' with 'red' %}
@@ -91,7 +91,7 @@ color: 'red' shape: 'square'
 ### schema 
 The schema tag is used in section files to define the settings and properties of that section.
 {% raw %}
-```
+```liquid
 {% schema %}
   {
     "name": "Header",
@@ -114,13 +114,13 @@ The schema tags must contain valid JSON and cannot be nested inside another them
 ### section 
 Inserts a section from the sections folder of a theme.
 {% raw %}
-```
+```liquid
 {% section 'header' %}
 ```
 {% endraw %}
 Output:
 {% raw %}
-``` html
+```html
 <div id="shopify-section-header" class="shopify-section">
   <!-- content of sections/header.liquid -->
 </div>

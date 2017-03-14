@@ -29,7 +29,7 @@ description: is used to access the properties of the products within your shop
 ### Code
 Returns the product code that has been set against the product within the 3ex.net system.
 {% raw %}
-```
+```liquid
 {{ Product.Code }}
 ```
 {% endraw %}
@@ -40,7 +40,7 @@ Returns the product code that has been set against the product within the 3ex.ne
 ### CodeToUseInUrl	
 Similar to the Code, but with illegal URL characters removed to make it suitable for use in hyperlinks.
 {% raw %}
-```
+```liquid
 {{ Product.CodeToUseInUrl }}
 ```
 {% endraw %}
@@ -51,7 +51,7 @@ Similar to the Code, but with illegal URL characters removed to make it suitable
 ### Id
 This will return the unique id of a product.
 {% raw %}
-```
+```liquid
 {{ Product.Id }}
 ```
 {% endraw %}
@@ -62,7 +62,7 @@ This will return the unique id of a product.
 ### Description
 A brief description of the product will be returned.
 {% raw %}
-```
+```liquid
 {{ Product.Description }}
 ```
 {% endraw %}
@@ -73,7 +73,7 @@ A brief description of the product will be returned.
 ### DescriptionToUseInUrl	
 Similar to the Description, but with illegal URL characters removed to make it suitable for use in hyperlinks.
 {% raw %}
-```
+```liquid
 {{ Product.DescriptionToUseInUrl }}
 ```
 {% endraw %}
@@ -84,7 +84,7 @@ Similar to the Description, but with illegal URL characters removed to make it s
 ### NavigateUrl
 This will return a url that a website visitor can click to take them to the product detail page for the product.
 {% raw %}
-``` html 
+```liquid 
 <a href="{{ Product.NavigateUrl }}">{{ Product.Description }}</a>
 ```
 {% endraw %}
@@ -95,7 +95,7 @@ This will return a url that a website visitor can click to take them to the prod
 ### DefaultHierarchyNodeModel	
 Holds the Default Hierarchy Node data if it's available. The DefaultHierarchyNode is the default hierarchy that gets assigned to a product. This gives you access to all the HierachyNode attributes for the Products default HierarchyNode.
 {% raw %}
-```
+```liquid
 {{ Product.DefaultHierarchyNodeModel.NavigateUrl }}
 ```
 {% endraw %}
@@ -110,7 +110,7 @@ Output: This will generate the url for the Products Default HierarchyNode.
 ### ProductPrice	
 Contains pricing information for the default Vertical price matrix.
 {% raw %}
-```
+```liquid
 {{ Product.StandardOurPrice_VatInclusivePrice }}
 {{ Product.StandardOurPrice_VatExclusivePrice }}
 {{ Product.WasPrice_VatInclusivePrice }}
@@ -126,7 +126,7 @@ Contains pricing information for the default Vertical price matrix.
 Allows pricing information to be queried via a code.
 
 {% raw %}
-```
+```liquid
 {{ Product.StandardOurPrice_VatInclusivePrice }}
 {{ Product.StandardOurPrice_VatExclusivePrice }}
 {{ Product.WasPrice_VatInclusivePrice }}
@@ -143,7 +143,7 @@ Allows pricing information to be queried via a code.
 ### FormOfProduct	
 Used to determine what the type of product is.  The FormOfProduct is the type that is assigned to a Product when it is set up.  
 {% raw %}
-```
+```liquid
 {{ Product.FormOfProduct.IsVariantBase }}
 ```
 {% endraw %}
@@ -158,7 +158,7 @@ This above example could be used within an if statement to render certain inform
 ### MetadataForOverride		
 The Override Metadata for this Product if any exists.
 {% raw %}
-```
+```liquid
 {{ Page.MetaDescription }}
 ```
 {% endraw %}
@@ -179,7 +179,7 @@ Product Group Code to use for segmentation.
 ### Tag
 This will return the website Tag for a Product.
 {% raw %}
-```
+```liquid
 {{ Tag.TagName }}
 ```
 {% endraw %}
@@ -193,7 +193,7 @@ Output: This will return the Name of the Tag.
 ### Additional Fields
 Within the Product model you can access additional data set against the product. Related Data elements are used to store extra information that you may want to display, for example a products short description.
 {% raw %}
-```
+```liquid
 {{ Product.Answer_PSD }}
 {{ Product.Answer_C1 }}
 {{ Product.Answer_C2 }}

@@ -17,7 +17,7 @@ You can use variable tags to create new Liquid variables.
 ### assign 
 Creates a new named variable.
 {% raw %}
-```
+```liquid
 {% assign favorite_food = 'apples' %}
 My favorite food is {{ favorite_food }}.
 ```
@@ -26,7 +26,7 @@ Output: My favorite food is apples.
 
 assigned variables can be strings or booleans (true or false). Remember not to use quotation marks around the value if it is true or false:
 {% raw %}
-```
+```liquid
 {% assign first_time_visitor = true %}
 {% if first_time_visitor == true %}
   Welcome to the site!
@@ -43,7 +43,7 @@ Captures the string inside of the opening and closing tags and assigns it to a v
 
 Using capture, you can create complex strings using other variables created with assign.
 {% raw %}
-```
+```liquid
 {% assign favorite_food = 'pizza' %}
 {% assign age = 35 %}
 
@@ -64,7 +64,7 @@ Creates a new number variable, and increases its value by 1 every time 'incremen
 
 Here, an increment counter is used to create a unique numbered class for each list item:
 {% raw %}
-``` html 
+```liquid 
 <ul>
   <li class="item-{% increment counter %}">apples</li>
   <li class="item-{% increment counter %}">oranges</li>
@@ -75,7 +75,7 @@ Here, an increment counter is used to create a unique numbered class for each li
 {% endraw %}
 Output:
 {% raw %}
-``` html
+```html
 <ul>
   <li class="item-0">apples</li>
   <li class="item-1">oranges</li>
@@ -88,7 +88,7 @@ Variables created using increment are separate from variables created using assi
 
 In the example below, a variable named my_number is created using assign. The increment tag is then used several times on a variable with the same name. Note that the increment tag does not affect the value of my_number that was created through assign.
 {% raw %}
-``` 
+```liquid
 {% assign my_number = 10 %}
 {% increment my_number %}
 {% increment my_number %}
@@ -108,7 +108,7 @@ Output:
 ### decrement 
 Creates a new number variable, and decreases its value by 1 every time 'decrement' is called on the variable. The counter's initial value is -1.
 {% raw %}
-``` 
+```liquid 
 {% decrement variable %}
 {% decrement variable %}
 {% decrement variable %}

@@ -64,6 +64,7 @@ Nested menu.
 				</ul>
 			</li>
 			{% else %}
+			<!-- Output a single level one link if it has no children -->
 			<li><a href="{{ link.NavigateUrl }}">{{ link.HierarchyLevel.Description }}</a></li>
 		{% endif %}
 	{% endfor %}
