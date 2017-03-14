@@ -1,0 +1,232 @@
+h1, h2, h3, h4, h5, h6, p{
+	color: #333;
+	font-family: "lato";
+}
+
+h1{
+	font-size:3.1rem;
+	font-weight:bold;
+}
+
+h2{
+	font-size:2.4rem;
+	font-weight:bold;
+}
+
+h3{
+	font-size:1.5rem;
+	font-weight:bold;
+}
+
+hr{
+	border-bottom:1px solid #f3f3f3;
+}
+
+p{
+	font-size:1.1rem;
+	font-weight:300;
+}
+
+code{
+	background:none;
+	border:none;
+}
+
+.highlighter-rouge{
+	margin-bottom:0;
+	background:none;
+	padding:0;
+	font-weight:bold;
+}
+
+a, input{
+	&.button{
+		background:#00bbe4;
+		color:#fff;
+		padding: 0.6em 1.6em;
+    	margin: 0 1rem 1rem 0;
+    	border-radius:3px;
+    	font-size:1rem;
+    	font-weight:bold;
+    	&:hover{
+    		background-color: #00c7f2;
+    		color: #fff;
+    	}
+	}
+}
+
+.large-10 ul li{
+	padding:0.2rem;
+	a{
+		color:#333;
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+}
+
+.example-title{
+	padding: 9px 14px;
+    background-color: #e5e5e5;
+    border: 1px solid #dddddd;
+    border-bottom:none;
+    border-radius: 4px 4px 0 0;
+}
+
+.normal{
+	h2{
+		margin-top:2rem;
+		border-top:1px solid #f3f8f9;
+		padding-top:2rem;
+		&:first-child{
+			border:none;
+		}
+	}
+	ul{
+		list-style:none;
+		margin:.5rem 0;
+	}
+	h3{
+		margin-top:1rem;
+		border-top:1px solid #f3f8f9;
+		padding-top:1rem;		
+	}
+}
+
+.content{
+	margin-top:4rem;
+}
+
+.menu{
+	&.vertical{
+		background:#f3f8f9;
+		border:none;
+		border-radius:0;
+		padding:1rem 0;
+		li{
+			font-weight:bold;
+			a{
+				color:#333;
+			}
+			ul{
+				margin:0;
+				padding:0;
+				li{
+					font-weight:300;
+					line-height:1rem;
+					a{
+						padding:.5rem 1rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.highlight{
+	padding: 9px 14px;
+    margin-bottom: 14px;
+    background-color: #f5f5f5;
+    border: 1px solid #dddddd;
+    border-radius: 0 0 4px 4px;
+    overflow: auto;
+	/** Syntax highlighting styles */
+	.c { color: #998; font-style: italic; }
+	.err { color: #a61717; background-color: #e3d2d2; }
+	.k { font-weight: bold; }
+	.o { font-weight: bold; }
+	.cm { color: #998; font-style: italic; }
+	.cp { color: #999; font-weight: bold; }
+	.c1 { color: #998; font-style: italic; }
+	.cs { color: #999; font-weight: bold; font-style: italic; }
+	.gd { color: #000; background-color: #fdd; }
+	.gd .x { color: #000; background-color: #faa; }
+	.ge { font-style: italic; }
+	.gr { color: #a00; }
+	.gh { color: #999; }
+	.gi { color: #000; background-color: #dfd; }
+	.gi .x { color: #000; background-color: #afa; }
+	.go { color: #888; }
+	.gp { color: #555; }
+	.gs { font-weight: bold; }
+	.gu { color: #aaa; }
+	.gt { color: #a00; }
+	.kc { font-weight: bold; }
+	.kd { font-weight: bold; }
+	.kp { font-weight: bold; }
+	.kr { font-weight: bold; }
+	.kt { color: #458; font-weight: bold; }
+	.m { color: #099; }
+	.s { color: #d14; }
+	.na { color: #008080; }
+	.nb { color: #0086B3; }
+	.nc { color: #458; font-weight: bold; }
+	.no { color: #008080; }
+	.ni { color: #800080; }
+	.ne { color: #900; font-weight: bold; }
+	.nf { color: #900; font-weight: bold; }
+	.nn { color: #555; }
+	.nt { color: #000080; }
+	.nv { color: #008080; }
+	.ow { font-weight: bold; }
+	.w { color: #bbb; }
+	.mf { color: #099; }
+	.mh { color: #099; }
+	.mi { color: #099; }
+	.mo { color: #099; }
+	.sb { color: #d14; }
+	.sc { color: #d14; }
+	.sd { color: #d14; }
+	.s2 { color: #d14; }
+	.se { color: #d14; }
+	.sh { color: #d14; }
+	.si { color: #d14; }
+	.sx { color: #d14; }
+	.sr { color: #009926; }
+	.s1 { color: #d14; }
+	.ss { color: #990073; }
+	.bp { color: #999; }
+	.vc { color: #008080; }
+	.vg { color: #008080; }
+	.vi { color: #008080; }
+	.il { color: #099; }
+
+}
+
+code{
+	padding:0!important;
+}
+pre {
+	tab-size: 4;
+	-o-tab-size: 4; /* Code for Opera 10.6-12.1 */
+	-moz-tab-size: 4; /* Code for Firefox */
+}
+.copy-button{
+	osition:absolute;
+	top:0;
+	right:0;
+	padding:10px;
+	background:#fff;
+	border:1px solid #e1e1e8;
+	border-top:none;
+	border-right:none;
+	border-radius:0 0 0 4px;
+	cursor:pointer;
+	outline:none;
+	font-size:0.75rem;
+}
+.copy-button:hover{
+	background:#00bbe4;
+	color:#ffffff;
+	border-color:#00bbe4;
+}
+.blueprints .blueprint .card{
+	position:relative;
+}
+.blueprints .blueprint .card .blueprint-link{
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}

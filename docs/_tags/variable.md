@@ -2,7 +2,7 @@
 layout: collection
 title: Variable Tags
 name: variable
-description: create new Liquid variables.
+description: Create new Liquid variables
 ---
 
 **Variable tags**

@@ -2,7 +2,7 @@
 layout: collection
 title: Theme Tags
 name: theme
-description: have many functions
+description: A wide range of functions available
 ---
 
 **Theme tags** have many functions, including:
