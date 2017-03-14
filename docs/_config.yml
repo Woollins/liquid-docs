@@ -42,6 +42,7 @@ highlighter: rouge
 
 sass:
   style: compressed
+  sass_dir: _scss
 
 # theme: minima
 gems:

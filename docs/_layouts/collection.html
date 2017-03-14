@@ -10,10 +10,18 @@ layout: collection
 
 {% include header.html %}
 
-<div class="row">
+
+<div class="lightbg internal">
+	<div class="row column text-center">
+		<h1>{{ page.title }}</h1>
+		<p>{{ page.description }}</p>
+	</div>
+</div>
+
+
+<div class="row content">
 
 	<div class="column medium-9 large-10 medium-push-3 large-push-2">
-		<h1 class="page-heading">{{ page.title }}</h1>
 		{{ content }}
 	</div>
 	

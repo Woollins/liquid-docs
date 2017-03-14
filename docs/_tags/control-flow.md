@@ -2,11 +2,10 @@
 layout: collection
 title: Control Flow Tags
 name: control-flow
-description: create conditions that decide whether blocks of Liquid code get executed
+description: Create conditions that decide whether blocks of Liquid code get executed
 ---
 
-**Control flow tags**
-Control flow tags create conditions that decide whether blocks of Liquid code get executed.
+## Control flow tags
 * [if](#if)
 * [unless](#unless)
 * [else/elsif](#else/elseif)
@@ -14,11 +13,10 @@ Control flow tags create conditions that decide whether blocks of Liquid code ge
 * [Multiple conditions (and/or)](#multiple)
 
 
-## Control flow tags
-
 <a name="if"></a>
 ### if 
 Executes a block of code if the result is true.
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 {% if product.Title == 'Nikon Camera' %}
@@ -26,13 +24,17 @@ Executes a block of code if the result is true.
 {% endif %}
 ```
 {% endraw %}
-Output: This Nikon Camera is great!
+<div class="example-title">Output</div>
+```html
+This Nikon Camera is great!
+```
 
 ---
 
 <a name="unless"></a>
 ### unless 
 Like if, but only executes a block of code if the result is false.
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 {% unless product.Title == 'Nikon Camera' %}
@@ -40,9 +42,13 @@ Like if, but only executes a block of code if the result is false.
 {% endunless %}
 ```
 {% endraw %}
-Output: You are not buying awesome shoes.
+<div class="example-title">Output</div>
+```html
+You are not buying awesome shoes.
+```
 
 This is the same as using the following if statement,
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 {% if product.Title != 'Nikon Camera' %}
@@ -56,6 +62,7 @@ This is the same as using the following if statement,
 <a name="else/else"></a>
 ### else/else if 
 Executes a block of code if the result is true and another block of code if false.
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 {% if product.Title == 'Nikon Camera' %}
@@ -75,6 +82,7 @@ Executes a block of code if the result is true and another block of code if fals
 Creates a switch statement to execute a particular block of code when a variable has a specified value. 'case' initializes the switch statement, and 'when' statements define the various conditions.
 
 You can optionally add an else statement at the end of the case to provide code to execute if none of the conditions are met.
+<div class="example-title">Input</div>
 {% raw %}
 ```liquid
 {% case shipping_method.title %}
@@ -98,19 +106,24 @@ You can use 'and/or' to include one or more conditions within your tags.  If you
 
 #### and
 A condition with an 'and' will only be true if both the left and the right side of the condition are true.
+<div class="example-title">Input</div>
 {% raw %}
-```liquid 
+```liquid
 {% if product.Title == 'Nikon Camera' and product.Description == 'This camera is great!' %}
   You are buying a great Nikon Camera!
 {% endif %}
 ```
 {% endraw %}
+<div class="example-title">Output</div>
+```html
 If both conditions are true you will get the following message, 'You are buying a great Nikon Camera!'' 
+```
 
 #### or
 A condition with an 'or' will be true if either the left or the right side of the condition is true.
+<div class="example-title">Input</div>
 {% raw %}
-```liquid 
+```liquid
 {% if product.Title contains 'SALE' or product.Description contains 'mycompany.com' %}
   Welcome! We're pleased to offer you a special discount of 15% on all products.
 {% else %}

@@ -2,9 +2,8 @@
 layout: normal
 title: Getting Started
 permalink: /getting-started/
+description: Now that you know what Liquid is let's have a look at the four key features and how they work.
 ---
-
-Now that you have a know what Liquid is let's have a look at four key features and how they work in relation to theme development.
 
 ## Models
 
@@ -98,15 +97,15 @@ Multiple operators can also be used,
 
 You have access to a wide range of operators in Liquid, many of which you will find yourself using regularly:
 
-```==``` equal
-```!=``` not equal
-```>``` greater than
-```<``` less than
-```>=``` bigger or equal
-```<=``` less or equal
-```or``` this or that
-```and``` must be this and that
-```contains``` includes the substring if used on a string, or element if used on an array
++ ```==``` equal
++ ```!=``` not equal
++ ```>``` greater than
++ ```<``` less than
++ ```>=``` bigger or equal
++ ```<=``` less or equal
++ ```or``` this or that
++ ```and``` must be this and that
++ ```contains``` includes the substring if used on a string, or element if used on an array
 
 *__Maybe link to a page with a full list and [explanations](https://help.shopify.com/themes/liquid/basics/operators)__*
 
