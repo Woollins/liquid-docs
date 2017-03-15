@@ -27,7 +27,7 @@ One level deep menu.
 		<!-- Output a link and the description for each node -->
 		<li><a href="{{ link.NavigateUrl }}">{{ link.HierarchyLevel.Description }}</a></li>
 	{% endfor %}
-	<ul>
+	</ul>
 {% endif %}
 ```
 {% endraw %}
@@ -37,7 +37,7 @@ One level deep menu.
 ```html
 <ul>
 	<li><a href="/footwear">Footwear</a></li>
-<ul>
+</ul>
 ```
 {% endraw %}
 
@@ -68,7 +68,7 @@ Nested menu.
 			<li><a href="{{ link.NavigateUrl }}">{{ link.HierarchyLevel.Description }}</a></li>
 		{% endif %}
 	{% endfor %}
-	<ul>
+	</ul>
 {% endif %}
 ```
 {% endraw %}
@@ -83,8 +83,6 @@ Nested menu.
 			<li><a href="/footwear/trainers">Trainers</a></li>
 		</ul>
 	</li>
-<ul>
+</ul>
 ```
 {% endraw %}
-
----
