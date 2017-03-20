@@ -87,6 +87,24 @@ a, input{
 
 .content{
 	margin-top:4rem;
+	.mainContent{
+		ul{
+			border-bottom:1px solid #f3f8f9;
+			margin:0 0 2rem 0;
+			padding:1rem 4rem 2rem 4rem;
+			li{
+				padding:.5rem 0;
+				a{
+					color:#333;
+					font-weight:bold;
+					&:hover{
+						color:#00bbe4;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
 }
 
 .menu{

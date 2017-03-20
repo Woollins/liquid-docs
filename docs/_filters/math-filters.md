@@ -2,11 +2,10 @@
 layout: collection
 title: Math Filters
 name: math-filters
-description: allow you to apply mathematical tasks
+description: Allow you to apply mathematical tasks
 ---
 
-**Math Filters**
-Math filters allow you to apply mathematical tasks.
+## Math Filters
 
 * [DividedBy](#divideby)
 * [Minus](#minus) 

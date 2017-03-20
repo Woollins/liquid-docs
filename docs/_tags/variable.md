@@ -5,8 +5,7 @@ name: variable
 description: Create new Liquid variables
 ---
 
-**Variable tags**
-You can use variable tags to create new Liquid variables.
+## Variable tags
 * [assign](#assign)
 * [capture](#capture)
 * [increment](#increment)
