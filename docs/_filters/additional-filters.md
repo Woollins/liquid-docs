@@ -2,11 +2,10 @@
 layout: collection
 title: Additional Filters
 name: additional-filters
-description: serve many different purposes including formatting, converting, and applying CSS classes
+description: Serve many different purposes including formatting, converting, and applying CSS classes
 ---
 
-**Additional Filters**
-General filters serve many different purposes including formatting, converting, and applying CSS classes.
+## Additional Filters
 
 * [DateOnly](#dateonly) 
 * [FormatCurrency](#formatcurrency) 

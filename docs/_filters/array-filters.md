@@ -2,11 +2,10 @@
 layout: collection
 title: Array Filters
 name: array-filters
-description: change the output of the arrays
+description: Change the output of the arrays
 ---
 
-**Array Filters**
-Change the output of the arrays.
+## Array Filters
 
 * [Join](#join) 
 * [First](#first) 

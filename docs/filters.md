@@ -5,6 +5,7 @@ permalink: /filters/
 description: Filters are simple methods that modify the output of numbers, strings, variables and objects.
 ---
 
+## Filters
 Filters are placed within an output tag {% raw %}**{{ }}**{% endraw %} and are denoted by a pipe character **{% raw %}`|`{% endraw %}**.
 
 {% for filter in site.filters %}

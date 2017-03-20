@@ -2,11 +2,11 @@
 layout: collection
 title: Product
 name: product
-description: is used to access the properties of the products within your shop
+description: Is used to access the properties of the products within your shop
 ---
 
 
-**The Product Model** is used to access the details of the products within your shop.  The Product model has the following attributes:
+## The Product Model
 
 * [Code](#code)
 * [CodeToUseInUrl](#codetouseinurl)
@@ -26,46 +26,58 @@ description: is used to access the properties of the products within your shop
 ---
 
 <a name="code"></a>
-### Code
-Returns the product code that has been set against the product within the 3ex.net system.
+### Code 
+Returns the product code that has been set against the product within the 3ex.net system.  
+
 {% raw %}
 ```liquid
 {{ Product.Code }}
 ```
 {% endraw %}
 
+Data Type: string
+
 ---
 
 <a name="codetouseinurl"></a>
 ### CodeToUseInUrl	
-Similar to the Code, but with illegal URL characters removed to make it suitable for use in hyperlinks.
+Similar to the Code, but with illegal URL characters removed to make it suitable for use in hyperlinks.  
+
 {% raw %}
 ```liquid
 {{ Product.CodeToUseInUrl }}
 ```
 {% endraw %}
 
+Data Type: string
+
 ---
 
 <a name="id"></a>
 ### Id
-This will return the unique id of a product.
+This will return the unique id of a product.  
+
 {% raw %}
 ```liquid
 {{ Product.Id }}
 ```
 {% endraw %}
 
+Data Type: int
+
 ---
 
 <a name="description"></a>
 ### Description
-A brief description of the product will be returned.
+A brief description of the product will be returned.  
+
 {% raw %}
 ```liquid
 {{ Product.Description }}
 ```
 {% endraw %}
+
+Data Type: string
 
 ---
 
@@ -78,6 +90,8 @@ Similar to the Description, but with illegal URL characters removed to make it s
 ```
 {% endraw %}
 
+Data Type: string
+
 ---
 
 <a name="navigateurl"></a>
@@ -88,6 +102,8 @@ This will return a url that a website visitor can click to take them to the prod
 <a href="{{ Product.NavigateUrl }}">{{ Product.Description }}</a>
 ```
 {% endraw %}
+
+Data Type: string
 
 ---
 
@@ -104,6 +120,9 @@ Output: This will generate the url for the Products Default HierarchyNode.
 
 **__For a list of all HierarchyNode attributes see here - create link__** 
 
+
+Data Type: Hierarchy Node Model __need to link to this__
+
 ---
 
 <a name="price"></a>
@@ -118,6 +137,8 @@ Contains pricing information for the default Vertical price matrix.
 {% endraw %}
 
 **__Will need to update this once standard has been agreed - will need to link through to the Product Price	Model__** 
+
+Data Type: Product Price Model __need to link to this__
 
 ---
 
@@ -137,6 +158,8 @@ Allows pricing information to be queried via a code.
 
 **__Will need to update this once standard has been agreed - will need to link through to the Product Price	Model__** 
 
+Data Type: Product Price Model __need to link to this__
+
 ---
 
 <a name="formofproduct"></a>
@@ -152,6 +175,8 @@ This above example could be used within an if statement to render certain inform
 
 **__For a list of all FormOfProduct attributes see here - create link__** 
 
+Data Type: Form Of Product Model __need to link to this__
+
 ---
 
 <a name="metadataforoverride"></a>
@@ -165,6 +190,8 @@ The Override Metadata for this Product if any exists.
 
 **__Need to explain a bit more about what this is__**
 
+Data Type: Website Metadata Model __need to link to this__
+
 ---
 
 <a name="segmentation"></a>
@@ -172,6 +199,8 @@ The Override Metadata for this Product if any exists.
 Product Group Code to use for segmentation.
 
 **__Need to explain a bit more about what this is (I don't know)__**
+
+Data Type: string
 
 ---
 
@@ -186,6 +215,8 @@ This will return the website Tag for a Product.
 Output: This will return the Name of the Tag.
 
 **__For a list of all Tag attributes see here - create link__** 
+
+Data Type: Website Tag Model array __need to link to this__
 
 ---
 
@@ -204,3 +235,5 @@ Within the Product model you can access additional data set against the product.
 Output: Product Short Description, Characterstic One, Characterstic Two, Characterstic Three
 
 **__This will need more detail when standard has been agreed__**
+
+Data Type: __need to link to this__

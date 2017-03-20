@@ -2,11 +2,10 @@
 layout: collection
 title: String Filters
 name: string-filters
-description: manipulate outputs and variables
+description: Manipulate outputs and variables
 ---
 
-**String Filters**
-String filters are used to manipulate outputs and variables.
+## String Filters
 
 * [Append](#append)
 * [Capitalize](#capitalize)
