@@ -2,37 +2,141 @@
 layout: collection
 title: ApplyVoucherResult
 name: applyvoucherresult
-description: Contains the address information of a new user when registering or creating a new delivery address. When a page is posted back, the content in the inputs is lost. This model is used to retain the values entered so that they can be re-populated on a post back.
+description: The result of applying and removing a voucher. 
  
 ---
 
 ## ApplyVoucherResult
 
-* [AddressLine1](#addressline1)
-* [AddressLine2](#addressline2)
-* [AddressLine3](#addressline3)
-* [AddressLine4](#addressline4)
-* [AddressLine5](#addressline5)
-* [ConfirmationEmailAddress](#confirmationemailaddress)
-* [EmailAddress](#emailaddress)
-* [FirstName](#firstname)
-* [LastName](#lastname)
-* [Postcode](#postcode)
-* [Title](#title)
+* [AmountLeftToPay](#amountlefttopay)
+* [PaymentCoveredByVouchers](#paymentcoveredbyvouchers)
+* [VoucherCodeAlreadyRedeemed](#vouchercodealreadyredeemed)
+* [VoucherCodeAlreadyRegistered](#vouchercodealreadyregistered)
+* [VoucherCodeExpired](#vouchercodeexpired)
+* [VoucherCodeInvalid](#vouchercodeinvalid)
+* [VoucherCodeNotFound](#vouchercodenotfound)
+* [Vouchers](#vouchers)
 
 ---
 
-<a name="addressline1"></a>
-### AddressLine1
-Determines the first line of the user's address.
+<a name="amountlefttopay"></a>
+### AmountLeftToPay
+Determines the amount left to pay after voucher is applied.
 
 {% raw %}
 ```liquid
-{{ AddressFields.AddressLine1 }}
+{{ ApplyVoucherResult.AmountLeftToPay }}
 
 ```
 {% endraw %}
 
-Data Type: string
+Data Type: decimal
 
 ---
+
+<a name="paymentcoveredbyvouchers"></a>
+### PaymentCoveredByVouchers
+Determines if a payment is covered by voucher.
+
+{% raw %}
+```liquid
+{{ ApplyVoucherResult.PaymentCoveredByVouchers }}
+
+```
+{% endraw %}
+
+Data Type: boolean
+
+---
+
+<a name="vouchercodealreadyredeemed"></a>
+### VoucherCodeAlreadyRedeemed
+True if the voucher code has already been redeemed.
+
+{% raw %}
+```liquid
+{{ ApplyVoucherResult.VoucherCodeAlreadyRedeemed }}
+
+```
+{% endraw %}
+
+Data Type: boolean
+
+---
+
+<a name="vouchercodealreadyregistered"></a>
+### VoucherCodeAlreadyRegistered
+True if the voucher code has already been registered.
+
+{% raw %}
+```liquid
+{{ ApplyVoucherResult.VoucherCodeAlreadyRegistered }}
+
+```
+{% endraw %}
+
+Data Type: boolean
+
+---
+
+<a name="vouchercodeexpired"></a>
+### VoucherCodeExpired
+True if the voucher code has expired.
+
+{% raw %}
+```liquid
+{{ ApplyVoucherResult.VoucherCodeExpired }}
+
+```
+{% endraw %}
+
+Data Type: boolean
+
+---
+
+<a name="vouchercodeinvalid"></a>
+### VoucherCodeInvalid
+True if the voucher code is invalid.
+
+{% raw %}
+```liquid
+{{ ApplyVoucherResult.VoucherCodeInvalid }}
+
+```
+{% endraw %}
+
+Data Type: boolean
+
+---
+
+<a name="vouchercodenotfound"></a>
+### VoucherCodeNotFound
+True if the voucher code wasn't found.
+
+{% raw %}
+```liquid
+{{ ApplyVoucherResult.VoucherCodeNotFound }}
+
+```
+{% endraw %}
+
+Data Type: boolean
+
+---
+
+<a name="vouchers"></a>
+### Vouchers
+The vouchers applied to the basket.
+
+{% raw %}
+```liquid
+{{ ApplyVoucherResult.Vouchers }}
+
+```
+{% endraw %}
+
+Data Type: Voucher Model
+
+__Link to the voucher model__
+
+---		
