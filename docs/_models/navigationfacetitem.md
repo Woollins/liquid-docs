@@ -2,7 +2,7 @@
 layout: collection
 title: NavigationFacetItem
 name: navigationfacetitem
-description: Represents a Navigation Facet Item contained within a particular Navigation Facet. e.g. A Facet of Colour would have a list of items like: Red, Green and Blue.
+description: Represents a Navigation Facet Item contained within a particular Navigation Facet. For example a Facet of Colour would have a list of items like Red, Green and Blue
  
 ---
 
