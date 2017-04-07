@@ -34,7 +34,7 @@ collections:
     permalink: /:collection/:title
   blueprints:
     output: true
-    permalink: /:collection/:title
+    permalink: /:collection/:title 
 
 # Build settings
 markdown: kramdown

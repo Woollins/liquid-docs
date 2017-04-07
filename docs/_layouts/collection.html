@@ -6,7 +6,7 @@ layout: collection
 <head>
 {% include scripts.html %}
 </head>
-<body class="collection {{ page.title | downcase }}">
+<body class="collection {{ page.title | downcase | replace:' ','' }}">
 
 {% include header.html %}
 
@@ -28,6 +28,14 @@ layout: collection
 	<div class="column medium-4 large-3 medium-pull-8 large-pull-9">
 
 		<ul class="menu vertical">
+			<li>
+				<a href="{{ site.baseurl }}/blueprints">Blueprints</a>
+				<ul class="nested menu vertical">
+					{% for blueprint in site.blueprints %}
+						<li><a href="{{ site.baseurl }}{{ blueprint.url }}">{{ blueprint.title }}</a></li>
+					{% endfor %}
+				</ul>
+			</li>			
 			<li>
 				<a href="{{ site.baseurl }}/tags">Tags</a>
 				<ul class="nested menu vertical">
@@ -54,7 +62,6 @@ layout: collection
 			</li>
 		</ul>
 	</div>
-
 </div>
 
 {% include footer.html %}
