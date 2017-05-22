@@ -35,6 +35,9 @@ collections:
   blueprints:
     output: true
     permalink: /:collection/:title 
+  training:
+    output: true
+    permalink: /:collection/:title 
 
 # Build settings
 markdown: kramdown
