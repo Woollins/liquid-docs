@@ -35,6 +35,9 @@ collections:
   blueprints:
     output: true
     permalink: /:collection/:title 
+  blocks:
+    output: true
+    permalink: /:collection/:title 
 
 # Build settings
 markdown: kramdown
