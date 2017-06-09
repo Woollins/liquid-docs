@@ -6,37 +6,49 @@ description: Building Blocks a library of componenets to help you build your sit
 ---
 
 <div id="build">
-
-	<!-- class="search" automagically makes an input a search field. -->
-	<input class="search" placeholder="Search" />
-	<!-- class="sort" automagically makes an element a sort buttons. The date-sort value decides what to sort by. -->
-	<button class="sort" data-sort="all">All</button>
-	<button class="sort" data-sort="kits">Kits/Pages</button>
-	<button class="sort" data-sort="navigation">Navigation</button>
-	<button class="sort" data-sort="product">Product</button>
-	<button class="sort" data-sort="user">User/Account</button>
-	<button class="sort" data-sort="basket">Basket</button>
-	<button class="sort" data-sort="checkout">Checkout</button>
-	<button class="sort" data-sort="forms">Forms</button>
-	<button class="sort" data-sort="content">Content</button>
-
-	<!--<ul>
-		<li class="sort" data-sort="all">All</li>
-		<li class="sort" data-sort="kits">Kits/Pages</li>
-		<li class="sort" data-sort="navigation">Navigation</li>
-		<li class="sort" data-sort="product">Product</li>
-		<li class="sort" data-sort="user">User/Account</li>
-		<li class="sort" data-sort="basket">Basket</li>
-		<li class="sort" data-sort="checkout">Checkout</li>
-		<li class="sort" data-sort="forms">Forms</li>
-		<li class="sort" data-sort="content">Content</li>
-	</ul>-->
+	<div class="filter row">
+		<div class="column medium-10">
+			<ul id="options">
+				<li data-value="all">
+					<a href="#"><img src="../images/all.png" alt="all" /><span>All</span></a>
+				</li>
+				<li data-value="kits">
+					<a href="#"><img src="../images/pages.png" alt="pages" /><span>Kits/Pages</span></a>
+				</li>
+				<li data-value="navigation">
+					<a href="#"><img src="../images/navigation.png" alt="navigation" /><span>Navigation</span></a>
+				</li>
+				<li data-value="product">
+					<a href="#"><img src="../images/product.png" alt="product" /><span>Product</span></a>
+				</li>
+				<li data-value="user">
+					<a href="#"><img src="../images/user.png" alt="user" /><span>User/Account</span></a>
+				</li>
+				<li data-value="basket">
+					<a href="#"><img src="../images/basket.png" alt="basket" /><span>Basket</span></a>
+				</li>
+				<li data-valuet="checkout">
+					<a href="#"><img src="../images/checkout.png" alt="checkout" /><span>Checkout</span></a>
+				</li>
+				<li data-value="forms">
+					<a href="#"><img src="../images/content.png" alt="content" /><span>Forms</span></a>
+				</li>
+				<li data-value="content">
+					<a href="#"><img src="../images/content.png" alt="content" /><span>Content</span></a>
+				</li>
+			</ul>
+		</div>
+		<!-- class="search" automagically makes an input a search field. -->
+		<div class="column medium-2">
+			<input class="search" placeholder="Search" />
+		</div>
+	</div>
 
 	<ul class="list">
 	{% for bb in site.blocks %}
-		<li class="{{ bb.category }}">
-	  	* **<a href="{{ bb.name }}">{{ bb.title }}</a>**  
-	  	{{ bb.description }}   
+		<li class="{{ bb.category }} all">
+			  	<a href="{{ bb.name }}">{{ bb.title }}</a>
+			  	{{ bb.description }}   
 	  	</li>
 	{% endfor %}
 	</ul>
@@ -50,5 +62,6 @@ description: Building Blocks a library of componenets to help you build your sit
 
 		var userList = new List('build', options);
 	</script>
+
 
 </div>

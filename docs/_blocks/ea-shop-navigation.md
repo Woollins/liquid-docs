@@ -2,11 +2,12 @@
 layout: normal
 title: EA Shop Navigation
 name: ea-shop-navigation
-description: EA Shop Navigation
+description: The main navigation of the site.
 category: navigation
 ---
 
 ## EA Shop Navigation
+A responsive navigation with dropdowns on desktop.
 
 <div class="example-title">HTML / Liquid</div>
 {% raw %}

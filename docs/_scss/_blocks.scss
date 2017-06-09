@@ -1,0 +1,49 @@
+#build{
+	margin: 3rem 0;
+	.filter{
+		margin:1rem 0;
+		input{
+			padding:.5rem;
+			float: left;
+		}
+		ul{
+			margin:0;			
+			li{
+				cursor:pointer;
+				display:inline-block;			
+				a{
+					color:#333333;
+					&.img{
+						min-height: 36px;
+					}
+					&:hover{
+						background:#f3f8f9;
+					}
+				}
+				span{
+					display:block;
+					line-height:1rem;
+					color:#333333;
+					margin-top: auto;
+				}
+			}
+		}
+		&:after{
+			clear:both;
+			content:'';
+			display:block;
+		}
+	}
+	.list{
+		li{
+			width:30%;
+			float:left;
+			margin-right:2%;
+		}
+		&:after{
+			clear:both;
+			content:'';
+			display:block;
+		}
+	}
+}

@@ -55,3 +55,17 @@
 </script>
 
 
+<script>
+
+$("#options").on("click", "a", function(e){
+    e.preventDefault();
+    var $this = $(this).parent();
+    var $optionvalue = $this.data('value');
+    
+    $this.addClass("select").siblings().removeClass("select");
+    
+    $('.list li.all').css("display", "none");
+    $('.list li.' + $optionvalue).css("display", "block");
+})
+
+</script>
