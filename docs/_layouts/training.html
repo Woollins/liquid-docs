@@ -1,0 +1,60 @@
+---
+layout: training
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+{% include scripts.html %}
+</head>
+<body class="collection {{ page.title | downcase | replace:' ','' }}">
+
+{% include header.html %}
+
+
+<div class="lightbg internal">
+	<div class="row column text-center">
+		<h1>{{ page.title }}</h1>
+		<p>{{ page.description }}</p>
+	</div>
+</div>
+
+
+<div class="row content">
+
+	<div class="column medium-8 large-9 medium-push-4 large-push-3 mainContent">
+		{{ content }}
+	</div>
+	
+	<div class="column medium-4 large-3 medium-pull-8 large-pull-9">
+
+		<ul class="menu vertical">
+			<li>
+				<a href="{{ site.baseurl }}/training">Training</a>
+				<ul class="nested menu vertical">
+				{% for lesson in site.training %}
+					<li><a href="{{ site.baseurl }}{{ lesson.url }}">{{ lesson.title }}</a></li>
+				{% endfor %}
+				</ul>
+			</li>
+			<li>
+				<a href="{{ site.baseurl }}/blueprints">Blueprints</a>
+			</li>			
+			<li>
+				<a href="{{ site.baseurl }}/tags">Tags</a>
+			</li>
+			<li>
+				<a href="{{ site.baseurl }}/models">Models</a>
+			</li>
+			<li>
+				<a href="{{ site.baseurl }}/filters">Filters</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+{% include footer.html %}
+
+{% include footer-scripts.html %}
+
+</body>
+</html>
