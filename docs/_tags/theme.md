@@ -139,4 +139,3 @@ Inserts a section from the sections folder of a theme.
 </div>
 ```
 {% endraw %}
-Including section files with the {% raw %}{% section %}{% raw %} tag will render a 'static' section. To learn more about sections and how to include them in your theme, check out the documentation on theme sections.
