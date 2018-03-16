@@ -20,14 +20,13 @@ layout: collection
 
 
 <div class="row content">
-
 	<div class="column medium-8 large-9 medium-push-4 large-push-3 mainContent">
 		{{ content }}
 	</div>
-	
 	<div class="column medium-4 large-3 medium-pull-8 large-pull-9">
 
 		<ul class="menu vertical">
+			{% if page.title == 'Blueprints' %}
 			<li>
 				<a href="{{ site.baseurl }}/blueprints">Blueprints</a>
 				<ul class="nested menu vertical">
@@ -35,7 +34,9 @@ layout: collection
 						<li><a href="{{ site.baseurl }}{{ blueprint.url }}">{{ blueprint.title }}</a></li>
 					{% endfor %}
 				</ul>
-			</li>			
+			</li>
+			{% endif %}
+			{% if page.title contains 'Tags' %}		
 			<li>
 				<a href="{{ site.baseurl }}/tags">Tags</a>
 				<ul class="nested menu vertical">
@@ -44,6 +45,8 @@ layout: collection
 				{% endfor %}
 				</ul>
 			</li>
+			{% endif %}
+			{% if page.title == 'Models' %}	
 			<li>
 				<a href="{{ site.baseurl }}/models">Models</a>
 				<ul class="nested menu vertical">
@@ -52,6 +55,8 @@ layout: collection
 				{% endfor %}
 				</ul>
 			</li>
+			{% endif %}
+			{% if page.title contains 'Filters' %}	
 			<li>
 				<a href="{{ site.baseurl }}/filters">Filters</a>
 				<ul class="nested menu vertical">
@@ -60,6 +65,7 @@ layout: collection
 				{% endfor %}
 				</ul>
 			</li>
+			{% endif %}
 		</ul>
 	</div>
 </div>
