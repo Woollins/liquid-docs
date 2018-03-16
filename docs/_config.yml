@@ -29,6 +29,9 @@ collections:
   models:
     output: true
     permalink: /:collection/:title
+  endpoint:
+    output: true
+    permalink: /:collection/:title
   filters:
     output: true
     permalink: /:collection/:title
