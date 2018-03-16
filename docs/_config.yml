@@ -35,7 +35,11 @@ collections:
   blueprints:
     output: true
     permalink: /:collection/:title 
+<<<<<<< HEAD
+  blocks:
+=======
   training:
+>>>>>>> origin/Test
     output: true
     permalink: /:collection/:title 
 
